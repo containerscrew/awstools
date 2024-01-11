@@ -1,0 +1,20 @@
+[package]
+name = "awstools"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+
+members = [
+    "iam-policy-detector",
+]
+
+
+[dependencies]
+aws-config = "1.1.1"
+aws-sdk-iam = "1.9.1"
+tokio = { version = "1.35.1", features = ["full"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["json"] }
+serde_json = "1.0.111"
